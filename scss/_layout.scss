@@ -12,12 +12,15 @@
 .header_box{ }
 .header{}
 
-
+.bg_1{ background: #d5cff5c0;}
+.color_white{ color: #fff; text-shadow: 0px 0px 4px rgb(216, 216, 216);}
 
 .container_box{ clear:both;}
 .container{ width:100%; margin:0 auto; }
 .container section{}
 .container section .inner{ padding:30px; }
+
+
 
 @include respond-to(only-desktop){
     .container_box{ }
@@ -145,5 +148,18 @@
             span{ font-size: 15px; color: #999; margin-right: 8px;}
             h3{  display: inline-block; margin-left: 20px;;}
         }
+    }
+}
+
+.tab{ 
+    margin-bottom: 40px; text-align: center;
+    a{ font-size: 24px; margin: 0 30px; border: 3px solid pink; border-radius: 5px; padding: 5px 8px;}
+
+}
+.tab_content{
+    ul{ display: flex; flex-wrap: wrap; justify-content: space-around;} 
+    li{ margin-bottom: 50px; text-align: center; 
+        img{ margin-bottom: 20px; border-radius: 5px; }
+        h3{ color: #3e3e68; margin-bottom: 10px; font-size: 21px;}
     }
 }
