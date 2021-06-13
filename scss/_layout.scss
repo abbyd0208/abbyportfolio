@@ -145,12 +145,12 @@
    .item{
        display: flex; 
         .company_logo{ 
-            width: 30%; border:0px solid green;
+            width: 30%; 
             img{ width: 200px; height: auto;}
            }
-       .content{
-           width: 70%;
-       }
+        .content{
+            width: 70%;
+        }
 
        .title{  
            color: #888; margin-bottom: 10px;
@@ -166,7 +166,23 @@
             h3{  display: inline-block; margin-left: 20px;;}
         }
     }
+
+    @include respond-to(only-mobile){
+        .item{  flex-direction: column;
+            .company_logo{ text-align: center; width: 100%; margin-bottom: 30px;
+            }
+            .content{
+                width: 100%;
+            }
+        }
+    }
+    
+
 }
+
+
+
+
 
 .tab{ 
     margin-bottom: 40px; text-align: center;
@@ -196,11 +212,10 @@
         
         &:hover img{transform: translateY(-10px);}
     }
-    @include respond-to(pad){
-        li{ 
+    @include respond-to(only-mobile){
+        li{  width: 100%; 
             img{ width: 400px; height: 300px;
             }
-           
         }
     }
 }
